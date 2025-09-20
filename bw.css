@@ -1,0 +1,130 @@
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to top, hsl(0, 7%, 97%),rgb(14, 15, 14));
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 400px;
+  margin: 10px auto;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  
+}
+
+/* 🔹 Mobile Responsive Design */
+@media (max-width: 480px) 
+  .container {
+    width: 100%;
+    padding: 12px;
+  }
+
+h1 {
+  text-align: center;
+  color: hwb(234 6% 8%);
+  font-size: 30px;
+  margin-top: 15px;
+  font-weight: bolder;
+  
+
+}
+
+h2 {
+  text-align: center;
+  color: hsl(37, 92%, 51%);
+  font-size: 18px;
+  margin-bottom: 10px;
+  font-weight: bold;
+  }
+
+ p{text-align: center;
+  color: hwb(255 95% 4%);
+  font-size: 12px;
+  margin-bottom: 10px;
+  font-weight: bold;
+  
+
+  }
+
+.form-group {
+  margin-bottom: 10px;
+  color: hsl(243, 98%, 52%);;
+  font-weight: bold;
+}
+
+input {
+  width: 95%;
+  padding: 8px;
+  margin-top: 5px;
+  border-radius: 4px;
+  border: 2p  x solid #ccde06;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  background:hsl(340, 98%, 50%); ;
+  color: #f8f3f3;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  
+}
+
+
+.expense-item {
+  display: flex;
+  color:hsl(243, 98%, 52%);
+  gap: 10px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.expense-item input {
+  flex: 1;
+}
+
+.total-box {
+  margin-top: 10px;
+  font-size: 18px;
+  text-align: right;
+  color:hsl(243, 98%, 52%);; 
+  font-weight: bold;
+  
+}
+
+.hidden {
+  display: none;
+}
+
+#savedBudgets {
+  margin-top: 10px;
+}
+
+#savedList {
+  list-style: none;
+  padding: 0;
+}
+
+#savedList li {
+  background: #eef;
+  padding: 10px;
+  border-radius: 6px;
+  margin-bottom: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.edit-btn {
+  background: orange;
+  border: none;
+  padding: 5px 8px;
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+}
