@@ -1,50 +1,220 @@
-<!DOCTYPE html>
+  <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AYSHLYN Budget Calculator</title>
-  <link rel="stylesheet" href="bw.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>AYSHLYNE Stationery</title>
+ <!-- External CSS -->
+  <link rel="stylesheet" href="style.css" />
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div class="container">
-    <h1>AYSHLYN</h1>
-    <h2>Budget Calculator</h2>
-    <p>Created By &hearts; Aysha_Rizan</p>
 
-    <div class="form-group">
-      <label>Budget Name:</label>
-      <input type="text" id="budgetName" placeholder="Enter budget name">
+<!-- Header -->
+  <header class="header">
+    <div class="logo">
+      <img src="aysh logo.jpg" alt="Logo">
     </div>
+    <h1 class="title">AYSHLYNE</h1>
+ <nav>
+      <ul>
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#product">Products</a></li>
+        <li><a href="#aboutus">About Us</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="header-icons">
+      <span class="cart">🛒</span>
+     </header>
 
-    <div class="form-group">
-      <label>date:</label>
-      <input type="date" id="monthYear">
-    </div>
+<!-- ADMIN PANEL (only one copy) -->
+  <section class="form-section" style="display:none;">
+    <button id="closeAdminBtn" class="btn">Close Admin Panel</button>
 
-    <div id="expensesList">
-      <div class="expense-item">
-        <input type="text" placeholder="List" class="expenseName">
-        <input type="number" placeholder="Amount" class="expenseAmount">
+    <h2>Product Management</h2>
+    <form id="productForm">
+      <div class="grid">
+        <input type="text" id="productName" placeholder="Product Name *" required>
+        <input type="number" id="productPrice" placeholder="Price (Rs.0.00) *" required>
+        <input type="text" id="productCategory" placeholder="Category *" required>
+        <input type="file" id="productImage" accept="image/*">
+      </div>
+      <textarea id="productDescription" placeholder="Enter product description"></textarea>
+      <label>
+        <input type="checkbox" id="inStock" checked> In Stock
+      </label>
+      <label>
+        <input type="checkbox" id="featured"> Featured Product
+      </label>
+      <button type="submit" class="btn">+ Add / Save Product</button>
+    </form>
+
+    <h3>Admin Product List</h3>
+    <div class="admin-product-list"></div>
+  </section>
+
+
+  <!-- cart section -->
+<section id="cartSection" style="display:none; padding:20px;">
+  <h2>🛒 Your Cart</h2>
+  <div id="cartItems"></div>
+  <h3 id="cartTotal"></h3>
+  <button id="checkoutBtn" style="padding:10px 15px;background:#28a745;color:#fff;border:none;border-radius:5px;cursor:pointer;">
+    Checkout
+  </button>
+  <button id="closeCartBtn" style="padding:10px 15px;background:#fbf7f7;color:#0d0b0b;border:none;border-radius:5px;cursor:pointer;">
+    Close
+  </button>
+</section>
+
+
+   <!-- hero SECTION -->
+
+  <section id="hero" class="hero">
+    <div class="hero-content">
+      <h1 class="hero-title">AYSHLYNE Stationery</h1>
+      <p class="hero-tagline">✨ Stationery that inspires brilliance ✨</p>
+      <p class="hero-text">
+        Discover elegant notebooks, playful pens, and stylish desk essentials.  
+        At <strong>AYSHLYNE</strong>, we blend creativity and quality to make every idea shine.
+      </p>
+      <div class="hero-buttons">
+        <a href="#product" class="btn primary">Shop Now</a>
+        <a href="#product" class="btn secondary">Explore</a>
       </div>
     </div>
+    <div class="hero-image">
+      <img src="hom image.jpg" alt="AYSHLYNE Stationery Products">
+    </div>
+  </section>
 
-    <button id="addExpense">+ Add Next</button>
+   <!-- PRODUCT SECTION -->
+ <div> <section id="product" class="product-section">
+    <h2>Our Products</h2>
 
-    <div class="total-box">
-      <strong>Total:</strong> <span id="totalAmount">0</span>
+<div class="product-list">
+  <p class="in-stock">In Stock</p>
+<p class="out-of-stock">Out of Stock</p>
+<input type="number" class="qty-input" value="1" min="1">
+
+
+</div>
+ 
+
+ <!-- ABOUT SECTION -->
+    <section id="aboutus" class="section about-section">
+      <div class="container">
+        <h2 class="section-title">About AYSHLYNE</h2>
+        <p class="section-subtitle">Founded with a passion for quality stationery, AYSHLYNE has been serving students, professionals, and creative individuals with premium products that inspire productivity and creativity.</p>
+<div class="story-card">
+          <h3>Our Story</h3>
+          <p>AYSHLYNE began as a small passion project, born from the belief that quality stationery can transform how we work, learn, and express ourselves. What started as a local store has grown into a trusted online destination for stationery enthusiasts.</p>
+
+          <div class="mission-box">
+            <h4>Our Mission</h4>
+            <p>To provide exceptional stationery products that empower creativity, enhance productivity, and bring joy to everyday tasks through thoughtful design and premium quality.</p>
+          </div>
+
+          <div class="features-grid">
+            <div class="feature">
+              <div class="icon">🏅</div>
+              <h5>Premium Quality</h5>
+              <p>We source only the finest materials and partner with trusted manufacturers.</p>
+            </div>
+            <div class="feature">
+              <div class="icon">🤝</div>
+              <h5>Customer Focused</h5>
+              <p>Your satisfaction is our priority with excellent support and service.</p>
+            </div>
+            <div class="feature">
+              <div class="icon">🚚</div>
+              <h5>Fast Delivery</h5>
+              <p>Quick and reliable shipping with multiple delivery options.</p>
+            </div>
+            <div class="feature">
+              <div class="icon">🔒</div>
+              <h5>Secure Shopping</h5>
+              <p>We protect your personal information with industry-standard security.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="why-choose">
+          <h3>Why Choose AYSHLYNE?</h3>
+          <p>At AYSHLYNE, we believe that the right tools can make all the difference. From the moment you browse our collection to the day your order arrives, we’re dedicated to providing exceptional service and products you'll love to use every day.</p>
+        </div>
+      </div>
+    </section>
+    
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact-section">
+    <h2>Contact Us</h2>
+    <p>Have questions about our products or need assistance? We're here to help! Reach out to us through any of the channels below.</p>
+    
+    <div class="contact-cards">
+      <div class="card"><strong>📞 Phone</strong><br>+94 788 878 668</div>
+      <div class="card"><strong>✉️ Email</strong><br>ayshlyne1128.com</div>
+      <div class="card"><strong📍 Location</strong><br>Warakamra, Matale, Sri Lanka.</div>
+      <div class="card"><strong>⏰ Business Hours</strong><br>Mon - Sat: 9:00 AM - 6:00 PM</div>
     </div>
 
-    <button id="saveBudget">💾 Save Budget</button>
-    <button id="viewSaved">📂 Saved Budget</button>
-    <button id="clearAll">🧹 Clear All</button>
+    <a href="https://wa.me/94788878668" target="_blank" class="whatsapp-btn">💬 Chat with us on WhatsApp</a>
 
-    <div id="savedBudgets" class="hidden">
-      <h3>Saved Budgets</h3>
-      <ul id="savedList"></ul>
+    
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-top">
+      <h3>Stay Updated</h3>
+      <p>Subscribe to get updates on new products and special offers.</p>
+      <form class="subscribe-form">
+        <input class="mail" type="email" placeholder="Enter your email" required>
+        <button class="sbtn" type="submit">Subscribe</button>
+      </form>
     </div>
-  </div>
 
-  <script src="script.js"></script>
+    <div class="footer-contact">
+      <p>📞 +94 788 878 668</p>
+      <p>✉️ ayshlyne1128@gmail.com</p>
+      <p>📍 Warakamura, Matale, Sri Lanka.</p>
+    </div>
+    
+  <div class="footer-bottom">
+      <p>© 2024 AYSHLYNE. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+      <p>Designed and developed with ❤️ for stationery lovers everywhere</p>
+      <button id="adminBtn" class="btn">Admin</button>
+</div>
+</footer>
+<!-- Mobile Bottom Nav -->
+<nav class="bottom-nav">
+  <a href="#hero" class="nav-item">
+    <span class="icon">🏠</span>
+    <span class="text">Home</span>
+  </a>
+  <a href="#product" class="nav-item">
+    <span class="icon">📦</span>
+    <span class="text">Products</span>
+  </a>
+  <a href="#aboutus" class="nav-item">
+    <span class="icon">ℹ️</span>
+    <span class="text">About Us</span>
+  </a>
+  <a href="#contact" class="nav-item">
+    <span class="icon">📞</span>
+    <span class="text">Contact</span>
+  </a>
+</nav>
+
+<!-- Supabase client (no need for import) -->
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+ <!-- Cart Section -->
+
+
+  
+<script src="script.js"></script>
+
 </body>
-</html>
+
